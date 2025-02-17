@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.contrib.admin import sites
-from instructor.models import User, Category, Course, Module, Lesson
+from instructor.models import User, Category, Course, Module, Lesson,InstructorProfile
+
 
 
 
@@ -32,6 +33,7 @@ class ModuleAdmin(admin.ModelAdmin):
     inlines = [LessonInline]
 
 admin.site.register(Module, ModuleAdmin)
+admin.site.register(InstructorProfile)
 
 
 
